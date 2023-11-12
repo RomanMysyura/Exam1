@@ -1,6 +1,6 @@
 <?php
 
-// Configuracióo
+// Configuració
 include "../src/config.php";
 
 // Controllers
