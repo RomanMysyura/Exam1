@@ -1,23 +1,22 @@
 <?php
 function isLogged($request, $response, $container, $next){
     
-    // Comprovem si hem iniciat sessió
-    $logged = $request->get("SESSION", "logged");
+    // Iniciamos la sesión
     
-    // Si no hem iniciat sessió...
-    if(!$logged) {
 
-        // Redirigim al login
+    // Comprobamos si hemos iniciado sesión
+    $identified = $_SESSION['identified'] ?? false;
+    
+    // Si no hemos iniciado sesión...
+    if(!$identified) {
+
+        // Redirigimos al login
         $response->redirect("location: index.php?r=login");
         return $response;
     }
 
-    // Guardem el nom de l'usuari de la sessió
-    $name = $request->get("SESSION", "name");
-
-    // Assignem el correu a l'usuari
-    $response->set("email", $request->get("SESSION", "email"));
-
-    $response = $next($request, $response, $container);
+    // Si hemos iniciado sesión, redirigimos a la página de contacto
+    $response->redirect("location: index.php?r=allsubscribersverified");
     return $response;
 }
+?>

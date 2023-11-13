@@ -8,6 +8,6 @@ $config = [
         "server" => "localhost",
         "username" => "root",
         "password" => "",
-        "database" => "bddapartaments"
+        "database" => "bddexcursio"
     ]
 ];

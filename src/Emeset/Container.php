@@ -54,5 +54,8 @@ class Container
     public function reserves() {
         return new \Daw\Reserves($this->sql);
     }
+    public function subscribes() {
+        return new \Daw\Subscribes($this->sql);
+    }
     
 }

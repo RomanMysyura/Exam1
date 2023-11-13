@@ -13,16 +13,14 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="index.php?r=contactar">Contactar</a>
                 </li>
-                <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" role, data-bs-toggle="dropdown" aria-expanded="false">Àrea d'usuari</a>
-                    <ul class="dropdown-menu dropdown-menu-center">
-                        <li>
-                                <li><a class="dropdown-item" href="index.php?r=login">Iniciar sessió</a></li>
-                                <li><a class="dropdown-item" href="index.php?r=signup"><strong>Registrar-se</strong></a></li>
-                        </li>
-                    </ul>
-                    <div class="dropdown-divider"></div>
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.php?r=confirmregister">Confirmar inscripcio</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.php?r=allsubscribers">Consultar inscripcions</a>
+                </li>
+                
+                
             </ul>
         
         </div>

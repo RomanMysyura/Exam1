@@ -12,15 +12,18 @@ class Users {
         $this->sql = $sql;
     }
 
-    // Función para hacer login con el usuario 
-    public function login($email, $password){
-        $query = "SELECT * FROM users WHERE email = :email AND password = :password";
-        $stmt = $this->sql->prepare($query);
-        $stmt->execute([':email' => $email, ':password' => $password]);
+    public function verifyCode($code) {
+        $sql = "SELECT * FROM codes WHERE code = :code";
+        $stmt = $this->sql->prepare($sql);
+        $stmt->bindParam(':code', $code);
+        $stmt->execute();
+    
         $result = $stmt->fetch(\PDO::FETCH_ASSOC);
-
-        return $result; // Puedes modificar esto según tus necesidades
+    
+        // Devolver true si se encontró el código, false si no se encontró
+        return ($result !== false); 
     }
+    
+    
 }
-
 ?>

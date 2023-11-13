@@ -1,0 +1,15 @@
+.imgslider {
+    height: 800px !important;
+}
+
+.btninsripcio {
+
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: rgb(124, 124, 211);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
