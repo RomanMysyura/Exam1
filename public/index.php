@@ -68,5 +68,4 @@ if ($r == '') {
     controllerConfirmRegister($request, $response, $container);
 }
 
-
 $response->response();
