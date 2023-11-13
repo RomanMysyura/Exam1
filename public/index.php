@@ -29,7 +29,7 @@ include "../src/Emeset/Container.php";
 include "../src/Emeset/Request.php";
 include "../src/Emeset/Response.php";
 
-// Instanciom els objectes Emeset
+// Instanciom els objectes Emesett
 $request = new \Emeset\Request();
 $response = new \Emeset\Response();
 $container = new \Emeset\Container($config);
