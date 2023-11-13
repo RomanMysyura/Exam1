@@ -6,7 +6,10 @@ include "../src/config.php";
 // Controllers
 include '../src/controllers/controllerIndex.php';
 include '../src/controllers/controllerMenu.php';
+include '../src/controllers/controllerRegister.php';
+include '../src/controllers/controllerLogin.php';
 include '../src/controllers/controllerContactar.php';
+include '../src/controllers/controllerDoLogin.php';
 
 
 include '../src/controllers/controllerSubscribe.php';
@@ -29,7 +32,7 @@ include "../src/Emeset/Container.php";
 include "../src/Emeset/Request.php";
 include "../src/Emeset/Response.php";
 
-// Instanciom els objectes Emesett
+// Instanciom els objectes Emeset
 $request = new \Emeset\Request();
 $response = new \Emeset\Response();
 $container = new \Emeset\Container($config);
@@ -41,8 +44,16 @@ if (isset($_REQUEST["r"])) {
 
 if ($r == '') {
     controllerIndex($request, $response, $container);
-} else if ($r == 'contactar') {
+} else if ($r == 'signup') {
+    controllerRegister($request, $response, $container);
+} else if ($r == 'login') {
+    controllerLogin($request, $response, $container);
+} else if ($r == 'registrar') {
+    controllerDoRegister($request, $response, $container);
+}else if ($r == 'contactar') {
     controllerContactar($request, $response, $container);
+}else if ($r == 'dologin') {
+    controllerDoLogin($request, $response, $container);
 }else if ($r == 'subscribe') {
     controllerSubscribe($request, $response, $container);
 }else if ($r == 'dosubscribe') {
@@ -52,6 +63,8 @@ if ($r == '') {
 }else if ($r == 'allsubscribersverified') {
     controllerAllSubscribers($request, $response, $container);
 }else if ($r == 'confirmregister') {
+    controllerConfirmRegister($request, $response, $container);
+}else if ($r == 'doconfirmregister') {
     controllerConfirmRegister($request, $response, $container);
 }
 
